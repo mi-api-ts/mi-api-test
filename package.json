@@ -9,6 +9,7 @@
     "@om": "public/@om"
   },
   "scripts": {
+    "server": "npm run build && npm run start",
     "start": "node -r tsconfig-paths/register public/main.js",
     "dev": "nodemon",
     "build": "tsc",
