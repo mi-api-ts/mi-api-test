@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "commonjs",
-    "lib": ["ES2020", "ES2021", "ES2022", "DOM"],
+    "lib": ["ES2020", "DOM"],
     "outDir": "./public",
     "rootDir": "./src",
     "esModuleInterop": true,
@@ -11,10 +11,10 @@
     "skipLibCheck": true,
     "strict": false,
     "paths": {
-      "@core/*": ["./src/@core/*"],
-      "app/*": ["./src/app/*"],
-      "@db/*": ["./src/@db/*"],
-      "@om/*": ["./src/@om/*"]
+      "@core/*": ["./src/@core/*", "../public/@core/*"],
+      "app/*": ["./src/app/*", "../public/app/*"],
+      "@db/*": ["./src/@db/*", "../public/@db/*"],
+      "@om/*": ["./src/@om/*", "../public/@om/*"]
     }
   },
   "include": ["src/**/*.ts"],

@@ -1,5 +1,5 @@
 // Registrar module-alias PRIMERO (debe ser lo primero)
-import 'module-alias/register';
+//import 'module-alias/register';
 import 'reflect-metadata';
 
 import dotenv from 'dotenv';
@@ -9,7 +9,6 @@ dotenv.config();
 // Importaciones usando alias
 import app from 'app/app.service';
 import { logger } from '@core/logger';
-
 
 try {
     const PORT = process.env.PORT || 5000;

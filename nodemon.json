@@ -1,13 +1,25 @@
 {
-    "watch": ["src"],
-    "ext": "ts",
-    "ignore": ["**/*.test.ts", "**/*.spec.ts", ".git", "node_modules", "public"],
-    "exec": "node -r ts-node/register -r tsconfig-paths/register src/main.ts",
-    "env": {
+  "watch": [
+      "src"
+  ],
+  "ext": "ts",
+  "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules",
+      "public"
+  ],
+  "exec": "node -r ts-node/register -r tsconfig-paths/register src/main.ts",
+  "env": {
       "NODE_ENV": "development"
   },
-    "delay": 1000,
-    "events": {
+  "delay": 1000,
+  "signal": "SIGTERM",
+  "events": {
       "restart": "echo '🔄 Reiniciando servidor...'"
-    }
+  },
+  "kill": {
+      "force": true
   }
+}

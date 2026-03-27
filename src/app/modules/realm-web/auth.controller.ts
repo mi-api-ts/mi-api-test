@@ -199,10 +199,21 @@ export class AuthController {
     // ============================================================================
 
     getLocation = async (_req: Request, _res: Response): Promise<void> => {
+        
+        console.log('\n📍 [AUTH] ========== GET LOCATION ==========');
+        console.log(`📅 Timestamp: ${new Date().toISOString()}`);
+        console.log(`📝 Method: ${_req.method}`);
+        console.log(`📍 URL: ${_req.url}`);
+
+        const protocol = _req.protocol;
         const host = _req.get('host');
-        const hostname = `https://${host}`;   // ← Forzar HTTPS siempre
-        console.log(`📍 Location devuelta: ${hostname}`);
+        const hostname = `${protocol}://${host}`;
+
+        console.log(`🏠 Hostname: ${hostname}`);
+        console.log('========================================\n');
+
         _res.json({ hostname });
+
     };
 
 }

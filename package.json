@@ -2,19 +2,11 @@
   "name": "mi_api_rest",
   "version": "1.0.0",
   "main": "public/main.js",
-  "_moduleAliases": {
-    "@core": "public/@core",
-    "app": "public/app",
-    "@db": "public/@db",
-    "@om": "public/@om"
-  },
   "scripts": {
-    "server": "npm run build && npm run start",
-    "start": "node -r tsconfig-paths/register public/main.js",
+    "start": "concurrently --kill-others \"tsc --watch --incremental\" \"nodemon\"",
+    "build": "tsc --project tsconfig.json",
     "dev": "nodemon",
-    "build": "tsc",
-    "build:watch": "tsc --watch",
-    "prod": "npm run build && node -r tsconfig-paths/register public/main.js"
+    "prod": "npm run build && node public/main.js"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +14,7 @@
   "description": "",
   "dependencies": {
     "@hapi/boom": "^10.0.1",
+    "concurrently": "^9.2.1",
     "cors": "^2.8.6",
     "crypto-js": "^4.2.0",
     "dotenv": "^17.3.1",

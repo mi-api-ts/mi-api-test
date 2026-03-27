@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 // Registrar module-alias PRIMERO (debe ser lo primero)
-require("module-alias/register");
+//import 'module-alias/register';
 require("reflect-metadata");
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
