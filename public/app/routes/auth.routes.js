@@ -28,4 +28,3 @@ router.get('/api/client/v2.0/auth/profile', (0, utils_1.catchAsync)(auth_middlew
 // 6. Obtener ubicación del app
 router.get(`${constants_1.BASE_PATH}/location`, (0, utils_1.catchAsync)(_authController.getLocation));
 exports.default = router;
-//# sourceMappingURL=auth.routes.js.map

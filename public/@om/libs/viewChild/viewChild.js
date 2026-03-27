@@ -40,4 +40,3 @@ function injectViewChild(instance, propertyKey, value) {
     instance[propertyKey] = value;
     console.log(`💉 Inyectado en ${instance.constructor.name}.${propertyKey}`);
 }
-//# sourceMappingURL=viewChild.js.map

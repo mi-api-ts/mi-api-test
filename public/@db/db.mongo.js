@@ -406,4 +406,3 @@ exports.DbMongo = DbMongo = __decorate([
     (0, injector_1.Injectable)({ providedIn: "root" }),
     __metadata("design:paramtypes", [])
 ], DbMongo);
-//# sourceMappingURL=db.mongo.js.map

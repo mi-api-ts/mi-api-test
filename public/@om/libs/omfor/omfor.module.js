@@ -27,4 +27,3 @@ exports.OmForModule = OmForModule = __decorate([
     }),
     __metadata("design:paramtypes", [])
 ], OmForModule);
-//# sourceMappingURL=omfor.module.js.map

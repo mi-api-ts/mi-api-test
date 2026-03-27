@@ -46,4 +46,3 @@ try {
 catch (error) {
     console.log(error);
 }
-//# sourceMappingURL=main.js.map

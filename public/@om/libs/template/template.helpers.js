@@ -52,4 +52,3 @@ function findInJsonObject(object, selector) {
     }
     return searchRecursive(object);
 }
-//# sourceMappingURL=template.helpers.js.map

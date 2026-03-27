@@ -46,4 +46,3 @@ class Router {
         console.log('✅ Ruta activada:', route.path);
     }
 }
-//# sourceMappingURL=router.js.map

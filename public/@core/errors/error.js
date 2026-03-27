@@ -41,4 +41,3 @@ const errorHandler = (err, _req, res, _next) => {
     res.status(statusCode).send({ error: encodeJsonObject });
 };
 exports.errorHandler = errorHandler;
-//# sourceMappingURL=error.js.map

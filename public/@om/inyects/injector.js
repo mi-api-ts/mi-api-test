@@ -47,4 +47,3 @@ function Injectable(config) {
         return target;
     };
 }
-//# sourceMappingURL=injector.js.map

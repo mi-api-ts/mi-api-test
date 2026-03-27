@@ -156,4 +156,3 @@ function getFunction(name) {
 function listFunctions() {
     return Object.keys(functionsRegistry);
 }
-//# sourceMappingURL=functions.service.js.map

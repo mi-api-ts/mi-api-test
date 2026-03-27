@@ -22,4 +22,3 @@ function omFor(config, context) {
         return provider.objectData;
     };
 }
-//# sourceMappingURL=omfor.decorador.js.map

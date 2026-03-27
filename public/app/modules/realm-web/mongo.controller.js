@@ -186,4 +186,3 @@ exports.MongoController = MongoController;
 exports.MongoController = MongoController = __decorate([
     (0, injector_1.Injectable)({ providedIn: "root" })
 ], MongoController);
-//# sourceMappingURL=mongo.controller.js.map

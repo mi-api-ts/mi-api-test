@@ -138,4 +138,3 @@ exports.OmTemplateProviders = OmTemplateProviders = __decorate([
     (0, injector_1.Injectable)({ providedIn: "unique" }),
     __metadata("design:paramtypes", [])
 ], OmTemplateProviders);
-//# sourceMappingURL=template.provider.js.map

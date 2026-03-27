@@ -541,4 +541,3 @@ exports.DbModel = DbModel = __decorate([
     (0, injector_1.Injectable)({ providedIn: "root", dependencies: [db_mongo_1.DbMongo, ApiEvent] }),
     __metadata("design:paramtypes", [db_mongo_1.DbMongo, ApiEvent])
 ], DbModel);
-//# sourceMappingURL=db.model.js.map

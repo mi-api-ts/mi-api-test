@@ -140,4 +140,3 @@ exports.DbCore = DbCore = __decorate([
     (0, injector_1.Injectable)({ providedIn: "root", dependencies: [db_mongo_1.DbMongo] }),
     __metadata("design:paramtypes", [db_mongo_1.DbMongo])
 ], DbCore);
-//# sourceMappingURL=db.core.js.map

@@ -11,4 +11,3 @@ function Module(config) {
         return target;
     };
 }
-//# sourceMappingURL=module.decorator.js.map

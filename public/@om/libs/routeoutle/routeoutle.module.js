@@ -26,4 +26,3 @@ exports.OmRouteOutleModule = OmRouteOutleModule = __decorate([
     }),
     __metadata("design:paramtypes", [])
 ], OmRouteOutleModule);
-//# sourceMappingURL=routeoutle.module.js.map

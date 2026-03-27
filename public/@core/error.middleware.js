@@ -25,4 +25,3 @@ const notFoundHandler = (req, res) => {
     });
 };
 exports.notFoundHandler = notFoundHandler;
-//# sourceMappingURL=error.middleware.js.map

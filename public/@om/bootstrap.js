@@ -69,4 +69,3 @@ async function startApp(moduleClass, config) {
     const omProvider = provider_registry_1.ProviderRegistry.get(om_service_1.OmProviders);
     omProvider.setComponent(moduleClass, config);
 }
-//# sourceMappingURL=bootstrap.js.map

@@ -31,4 +31,3 @@ function omIf(config, context, parentLib = null) {
         return provider.objectData;
     };
 }
-//# sourceMappingURL=omif.decorador.js.map

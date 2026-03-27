@@ -27,4 +27,3 @@ exports.OmIfModule = OmIfModule = __decorate([
     }),
     __metadata("design:paramtypes", [])
 ], OmIfModule);
-//# sourceMappingURL=omif.module.js.map

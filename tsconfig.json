@@ -10,7 +10,6 @@
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
     "strict": false,
-    "baseUrl": "./",
     "paths": {
       "@core/*": ["./src/@core/*"],
       "app/*": ["./src/app/*"],

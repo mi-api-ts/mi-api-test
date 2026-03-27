@@ -33,4 +33,3 @@ function omTemplate(config, context, parentLib) {
         return service.startTemlate(provider);
     };
 }
-//# sourceMappingURL=template.decorador.js.map
