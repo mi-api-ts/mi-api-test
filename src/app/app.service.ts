@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 // ============================================================================
 
 app.use(cors({
-  origin: ['http://localhost:4200', 'http://127.0.0.1:4200',, 'https://mi-api-test-1.onrender.com'],
+  origin: ['http://localhost:4200', 'http://127.0.0.1:4200','https://mi-api-test-1.onrender.com'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
