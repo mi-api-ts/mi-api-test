@@ -15,7 +15,6 @@
     "sourceMap": true,
     "declaration": false,
     "strict": false,
-    "baseUrl": "./",
     "paths": {
       "@core/*": ["./src/@core/*"],
       "app/*": ["./src/app/*"],

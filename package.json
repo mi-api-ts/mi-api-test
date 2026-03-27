@@ -2,8 +2,15 @@
   "name": "mi_api_rest",
   "version": "1.0.0",
   "main": "public/main.js",
+  "_moduleAliases": {
+    "@core": "public/@core",
+    "app": "public/app",
+    "@db": "public/@db",
+    "@om": "public/@om"
+  },
   "scripts": {
-    "start": "nodemon",
+    "start": "node -r tsconfig-paths/register public/main.js",
+    "dev": "nodemon",
     "build": "tsc",
     "build:watch": "tsc --watch",
     "prod": "npm run build && node -r tsconfig-paths/register public/main.js"
