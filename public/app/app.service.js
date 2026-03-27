@@ -27,6 +27,13 @@ app.use((0, cors_1.default)({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express_1.default.json());
+app.options('*', (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+    res.setHeader('Access-Control-Max-Age', '86400');
+    res.status(204).end();
+});
 app.use(express_1.default.urlencoded({ extended: true }));
 // ============================================================================
 // RUTAS
