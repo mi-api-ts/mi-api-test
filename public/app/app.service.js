@@ -19,34 +19,8 @@ app.use((req, res, next) => {
 // ============================================================================
 // MIDDLEWARES GLOBALES
 // ============================================================================
-// Configuración CORS corregida
-const allowedOrigins = [
-    'http://localhost:4200',
-    'http://127.0.0.1:4200',
-    'https://mi-api-test-1.onrender.com'
-];
 app.use((0, cors_1.default)({
-    origin: function (origin, callback) {
-        // Permitir peticiones sin origen (Postman, curl, etc.)
-        if (!origin) {
-            return callback(null, true);
-        }
-        // Verificar si el origen está permitido
-        if (allowedOrigins.includes(origin)) {
-            callback(null, true);
-        }
-        else {
-            console.log(`❌ CORS bloqueado para: ${origin}`);
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
-}));
-// Manejar explícitamente las peticiones OPTIONS (preflight)
-app.options('*', (0, cors_1.default)({
-    origin: allowedOrigins,
+    origin: ['http://localhost:4200', 'http://127.0.0.1:4200', 'https://mi-api-test-1.onrender.com'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
@@ -71,6 +45,7 @@ app.get('/health', (req, res) => {
 // ============================================================================
 //app.use(notFoundHandler);
 app.use(errors_1.errorConverter);
+// handle error
 app.use(errors_1.errorHandler);
 exports.default = app;
 //# sourceMappingURL=app.service.js.map
