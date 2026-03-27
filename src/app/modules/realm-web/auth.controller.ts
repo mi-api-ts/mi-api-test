@@ -199,21 +199,22 @@ export class AuthController {
     // ============================================================================
 
     getLocation = async (_req: Request, _res: Response): Promise<void> => {
+        // Detecta protocolo real: X-Forwarded-Proto (proxy) o req.protocol (directo)
+        const protocol = 
+            (typeof _req.headers['x-forwarded-proto'] === 'string' 
+                ? _req.headers['x-forwarded-proto'].split(',')[0].trim() 
+                : _req.protocol);
         
-        console.log('\n📍 [AUTH] ========== GET LOCATION ==========');
-        console.log(`📅 Timestamp: ${new Date().toISOString()}`);
-        console.log(`📝 Method: ${_req.method}`);
-        console.log(`📍 URL: ${_req.url}`);
-
-        const protocol = _req.protocol;
+        // Override para desarrollo local (opcional, mantiene HTTP en local)
         const host = _req.get('host');
-        const hostname = `${protocol}://${host}`;
-
-        console.log(`🏠 Hostname: ${hostname}`);
-        console.log('========================================\n');
-
+        const isLocalhost = host?.includes('localhost') || host?.includes('127.0.0.1');
+        const finalProtocol = (isLocalhost && protocol === 'https') ? 'http' : protocol;
+        
+        const hostname = `${finalProtocol}://${host}`;
+        
+        console.log(`📍 Location: ${hostname} (detected: ${protocol}, localhost: ${isLocalhost})`);
+        
         _res.json({ hostname });
-
     };
 
 }
