@@ -351,3 +351,4 @@ ComponentRegistry.parentChildRelations = new Map();
 ComponentRegistry.classToSelector = new Map();
 // Estadísticas
 ComponentRegistry.stats = new Map();
+//# sourceMappingURL=component.registry.js.map

@@ -181,3 +181,4 @@ function inject(token) {
     }
     return service;
 }
+//# sourceMappingURL=provider.registry.js.map

@@ -144,3 +144,4 @@ function Component(config) {
         return target;
     };
 }
+//# sourceMappingURL=component.decorator.js.map

@@ -72,3 +72,4 @@ class ModuleRegistry {
 }
 exports.ModuleRegistry = ModuleRegistry;
 ModuleRegistry.modules = new Map();
+//# sourceMappingURL=module.registry.js.map

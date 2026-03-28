@@ -290,3 +290,4 @@ exports.OmRouteNavigation = OmRouteNavigation = __decorate([
     (0, injector_1.Injectable)({ providedIn: "unique" }),
     __metadata("design:paramtypes", [om_service_1.OmProviders])
 ], OmRouteNavigation);
+//# sourceMappingURL=route.navigation.js.map

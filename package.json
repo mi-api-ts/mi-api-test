@@ -2,11 +2,17 @@
   "name": "mi_api_rest",
   "version": "1.0.0",
   "main": "public/main.js",
+    "_moduleAliases": {
+    "@core": "public/@core",
+    "app": "public/app",
+    "@db": "public/@db",
+    "@om": "public/@om"
+  },
   "scripts": {
-    "start": "concurrently --kill-others \"tsc --watch --incremental\" \"nodemon\"",
-    "build": "tsc --project tsconfig.json",
+    "build": "tsc",
+    "start": "set NODE_ENV=production&& node public/main.js",
     "dev": "nodemon",
-    "prod": "npm run build && node public/main.js"
+    "clean": "rimraf public"
   },
   "keywords": [],
   "author": "",

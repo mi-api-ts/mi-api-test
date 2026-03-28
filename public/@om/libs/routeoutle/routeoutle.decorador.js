@@ -18,3 +18,4 @@ function omRouteOutle(config, classComponent, parentLib) {
         return service.startRouteOutle(provider);
     };
 }
+//# sourceMappingURL=routeoutle.decorador.js.map

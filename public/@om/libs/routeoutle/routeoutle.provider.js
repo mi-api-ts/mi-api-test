@@ -112,3 +112,4 @@ exports.OmRouteOutleProviders = OmRouteOutleProviders = __decorate([
     (0, injector_1.Injectable)({ providedIn: 'unique', dependencies: [om_service_1.OmProviders] }),
     __metadata("design:paramtypes", [om_service_1.OmProviders])
 ], OmRouteOutleProviders);
+//# sourceMappingURL=routeoutle.provider.js.map

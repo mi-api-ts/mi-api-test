@@ -1,13 +1,17 @@
 "use strict";
+// Registrar module-alias PRIMERO (debe ser lo primero)
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// Registrar module-alias PRIMERO (debe ser lo primero)
-//import 'module-alias/register';
-require("reflect-metadata");
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
+require("reflect-metadata");
+const captureOnv = String().concat(process.env.NODE_ENV).trim();
+console.log('NODE_ENV:', captureOnv === "production", captureOnv);
+if (captureOnv === "production") {
+    require('module-alias/register');
+}
 // Importaciones usando alias
 const app_service_1 = __importDefault(require("app/app.service"));
 const logger_1 = require("@core/logger");
@@ -46,3 +50,4 @@ try {
 catch (error) {
     console.log(error);
 }
+//# sourceMappingURL=main.js.map

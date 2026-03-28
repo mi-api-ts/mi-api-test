@@ -40,3 +40,4 @@ const logger = _logger.default;
 exports.logger = logger;
 const morgan = _morgan.default;
 exports.morgan = morgan;
+//# sourceMappingURL=index.js.map

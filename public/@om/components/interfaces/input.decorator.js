@@ -13,3 +13,4 @@ function Input(alias) {
         console.log(`🎯 @Input(): ${String(propertyKey)} ${alias ? `(alias: ${alias})` : ''}`);
     };
 }
+//# sourceMappingURL=input.decorator.js.map

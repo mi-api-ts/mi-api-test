@@ -13,3 +13,4 @@ const _authController = (0, provider_registry_1.inject)(mongo_controller_1.Mongo
 _realmwebRouter.post(`${constants_1.BASE_PATH}/functions/call`, auth_middleware_1.authenticateAccessToken, _authController.functionsCallHandler);
 _realmwebRouter.get(`${constants_1.BASE_PATH}/functions/call`, auth_middleware_1.authenticateAccessToken, _authController.functionsCallStreamHandler);
 exports.default = _realmwebRouter;
+//# sourceMappingURL=mongo.routes.js.map

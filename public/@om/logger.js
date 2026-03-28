@@ -204,3 +204,4 @@ function configureModuleLogger(_logger, moduleName) {
 }
 // Exportación por defecto para fácil importación
 exports.default = getModuleLogger;
+//# sourceMappingURL=logger.js.map

@@ -22,3 +22,4 @@ exports.default = {
     successHandler,
     errorHandler,
 };
+//# sourceMappingURL=morgan.js.map

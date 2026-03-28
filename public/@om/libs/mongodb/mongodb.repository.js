@@ -470,3 +470,4 @@ exports.MongoDBRepository = MongoDBRepository = __decorate([
     (0, injector_1.Injectable)({ providedIn: "root" }),
     __metadata("design:paramtypes", [])
 ], MongoDBRepository);
+//# sourceMappingURL=mongodb.repository.js.map

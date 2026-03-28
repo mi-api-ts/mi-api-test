@@ -138,3 +138,4 @@ class ComponentFactory {
     }
 }
 exports.ComponentFactory = ComponentFactory;
+//# sourceMappingURL=component.factory.js.map

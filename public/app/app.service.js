@@ -49,3 +49,4 @@ app.use(errors_1.errorConverter);
 // handle error
 app.use(errors_1.errorHandler);
 exports.default = app;
+//# sourceMappingURL=app.service.js.map

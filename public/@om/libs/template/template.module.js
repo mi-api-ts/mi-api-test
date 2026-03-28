@@ -26,3 +26,4 @@ exports.OmTemplateModule = OmTemplateModule = __decorate([
     }),
     __metadata("design:paramtypes", [])
 ], OmTemplateModule);
+//# sourceMappingURL=template.module.js.map

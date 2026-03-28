@@ -38,3 +38,4 @@ async function closeDatabaseConnection() {
         console.log('🔌 [DB] Conexión a MongoDB cerrada');
     }
 }
+//# sourceMappingURL=database.js.map

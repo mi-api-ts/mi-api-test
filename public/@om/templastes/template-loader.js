@@ -69,3 +69,4 @@ class TemplateLoader {
     }
 }
 exports.TemplateLoader = TemplateLoader;
+//# sourceMappingURL=template-loader.js.map

@@ -45,3 +45,4 @@ const catchAsync = (fn) => (req, res, next) => {
 };
 exports.catchAsync = catchAsync;
 exports.decodeToken = new classDecodeToken();
+//# sourceMappingURL=utils.js.map

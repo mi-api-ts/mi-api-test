@@ -37,3 +37,4 @@ function decodeToken(token) {
         return null;
     }
 }
+//# sourceMappingURL=token.utils.js.map

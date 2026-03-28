@@ -1,14 +1,27 @@
 // Registrar module-alias PRIMERO (debe ser lo primero)
-//import 'module-alias/register';
-import 'reflect-metadata';
+
+
 
 import dotenv from 'dotenv';
 dotenv.config();
+
+import 'reflect-metadata';
+const captureOnv =String().concat(process.env.NODE_ENV).trim()
+
+console.log('NODE_ENV:', captureOnv==="production",captureOnv);
+
+if (captureOnv==="production") {
+    require('module-alias/register');
+  }
+
+  
 
 
 // Importaciones usando alias
 import app from 'app/app.service';
 import { logger } from '@core/logger';
+import { env } from '@core/config/envConfig';
+
 
 try {
     const PORT = process.env.PORT || 5000;
