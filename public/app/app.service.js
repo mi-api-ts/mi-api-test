@@ -20,8 +20,8 @@ app.use((req, res, next) => {
 // MIDDLEWARES GLOBALES
 // ============================================================================
 app.use((0, cors_1.default)({
-    //origin: ['http://localhost:4200', 'http://127.0.0.1:4200', 'https://mi-api-test-1.onrender.com'],
-    origin: '*', // Permite TODOS los orígenes
+    origin: ['http://localhost:4200', 'http://127.0.0.1:4200', 'https://mi-api-test-1.onrender.com'],
+    //origin: '*',  // Permite TODOS los orígenes
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
