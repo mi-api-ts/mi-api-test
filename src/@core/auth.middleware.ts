@@ -14,7 +14,7 @@ export const authenticateAccessToken = (
   _next: NextFunction
 ) => {
   const authHeader = _req.headers.authorization;
-console.log(authHeader)
+
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     throw new ApiError(401, 'unauthorized')
   }

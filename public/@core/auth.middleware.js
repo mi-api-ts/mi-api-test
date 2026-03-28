@@ -6,7 +6,6 @@ const auth_service_1 = require("./services/auth.service");
 const errors_1 = require("./errors");
 const authenticateAccessToken = (_req, _res, _next) => {
     const authHeader = _req.headers.authorization;
-    console.log(authHeader);
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
         throw new errors_1.ApiError(401, 'unauthorized');
     }

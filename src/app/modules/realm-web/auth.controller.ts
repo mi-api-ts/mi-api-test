@@ -207,7 +207,7 @@ export class AuthController {
 
         const protocol = _req.protocol;
         const host = _req.get('host');
-        const hostname = `${protocol}://${host}`;
+        const hostname = `https://${host}`;
 
         console.log(`🏠 Hostname: ${hostname}`);
         console.log('========================================\n');
