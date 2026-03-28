@@ -27,7 +27,6 @@ const authenticateAccessToken = (_req, _res, _next) => {
 exports.authenticateAccessToken = authenticateAccessToken;
 const authenticateRefreshToken = (_req, _res, _next) => {
     const authHeader = _req.headers.authorization;
-    console.log("_req", _req);
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
         throw new errors_1.ApiError(401, 'unauthorized');
     }

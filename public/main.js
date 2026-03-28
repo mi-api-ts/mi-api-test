@@ -8,7 +8,6 @@ const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 require("reflect-metadata");
 const captureOnv = String().concat(process.env.NODE_ENV).trim();
-console.log('NODE_ENV:', captureOnv === "production", captureOnv);
 if (captureOnv === "production") {
     require('module-alias/register');
 }

@@ -47,7 +47,7 @@ export const authenticateRefreshToken = (
   _next: NextFunction
 ) => {
   const authHeader = _req.headers.authorization;
-  console.log("_req",   _req)
+
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
 
     throw new ApiError(401, 'unauthorized')

@@ -6,34 +6,31 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import 'reflect-metadata';
-const captureOnv =String().concat(process.env.NODE_ENV).trim()
+const captureOnv = String().concat(process.env.NODE_ENV).trim()
 
-console.log('NODE_ENV:', captureOnv==="production",captureOnv);
-
-if (captureOnv==="production") {
+if (captureOnv === "production") {
     require('module-alias/register');
-  }
+}
 
-  
+
 
 
 // Importaciones usando alias
 import app from 'app/app.service';
 import { logger } from '@core/logger';
-import { env } from '@core/config/envConfig';
 
 
 try {
     const PORT = process.env.PORT || 5000;
     let server: any;
 
-        //  const service = SocketsService.instance;
-        server = app.listen(PORT, async () => {
-            // service.mongoClient = conection;
-            logger.info(`Listening to port ${PORT}`);
+    //  const service = SocketsService.instance;
+    server = app.listen(PORT, async () => {
+        // service.mongoClient = conection;
+        logger.info(`Listening to port ${PORT}`);
 
 
-        });
+    });
 
 
     const exitHandler = () => {
@@ -61,7 +58,7 @@ try {
             server.close();
         }
     });
-    
+
 } catch (error) {
     console.log(error)
 }

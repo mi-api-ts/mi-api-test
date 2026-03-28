@@ -22,6 +22,7 @@ const defaultUser: StoredUser = {
 usersDb.set(defaultUser.userId, defaultUser);
 
 export function getUserByApiKey(apiKey: string): StoredUser | undefined {
+  console.log("apiKey",apiKey,usersDb.values())
   for (const user of usersDb.values()) {
     if (user.apiKey === apiKey) {
       return user;

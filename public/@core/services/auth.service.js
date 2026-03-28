@@ -24,6 +24,7 @@ const defaultUser = {
 };
 usersDb.set(defaultUser.userId, defaultUser);
 function getUserByApiKey(apiKey) {
+    console.log("apiKey", apiKey, usersDb.values());
     for (const user of usersDb.values()) {
         if (user.apiKey === apiKey) {
             return user;

@@ -9,6 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthController = void 0;
 const auth_service_1 = require("@core/services/auth.service");
 const injector_1 = require("@om/inyects/injector");
+const logger_1 = require("@core/logger");
 let AuthController = class AuthController {
     constructor() {
         this.login = async (_req, _res) => {
@@ -33,7 +34,7 @@ let AuthController = class AuthController {
             console.log(`🔑 [AUTH] API Key recibida: ${key.substring(0, 8)}...`);
             const user = (0, auth_service_1.getUserByApiKey)(key);
             if (!user) {
-                console.log('❌ [AUTH] Error: invalid api key');
+                logger_1.logger.info('❌ [AUTH] Error: invalid api key');
                 _res.status(401).json({
                     error: 'invalid api key',
                     error_code: 'InvalidAPIKey'
@@ -166,7 +167,10 @@ let AuthController = class AuthController {
             console.log(`📍 URL: ${_req.url}`);
             const protocol = _req.protocol;
             const host = _req.get('host');
-            const hostname = `https://${host}`;
+            let hostname = `${protocol}://${host}`;
+            if (process.env.SERVER === "remote") {
+                hostname = `https://${host}`;
+            }
             console.log(`🏠 Hostname: ${hostname}`);
             console.log('========================================\n');
             _res.json({ hostname });

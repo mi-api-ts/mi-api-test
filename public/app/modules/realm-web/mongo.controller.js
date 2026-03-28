@@ -120,7 +120,6 @@ let MongoController = class MongoController {
             }
             else {
                 try {
-                    console.log(_callFunctions);
                     const _name = _callFunctions.name;
                     const isFunction = todoFunctions[_name];
                     if (typeof isFunction === 'function') {

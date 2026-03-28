@@ -3,12 +3,10 @@ import { createLoginResponse, createRefreshResponse, getUserByApiKey, getUserByI
 import { LoginRequest, ProfileResponse } from "@core/types/auth.types";
 import { Injectable } from "@om/inyects/injector";
 import { AuthenticatedRequest } from '@core/auth.middleware';
-import { ApiError } from '@core/errors';
+import { logger } from '@core/logger';
 
 @Injectable({ providedIn: "root" })
 export class AuthController {
-
-
 
     login = async (_req: Request, _res: Response): Promise<void> => {
         console.log('\n🔐 [AUTH] ========== LOGIN REQUEST ==========');
@@ -37,7 +35,7 @@ export class AuthController {
 
         const user = getUserByApiKey(key);
         if (!user) {
-            console.log('❌ [AUTH] Error: invalid api key');
+            logger.info('❌ [AUTH] Error: invalid api key');
             _res.status(401).json({
                 error: 'invalid api key',
                 error_code: 'InvalidAPIKey'
@@ -207,7 +205,11 @@ export class AuthController {
 
         const protocol = _req.protocol;
         const host = _req.get('host');
-        const hostname = `https://${host}`;
+        let hostname = `${protocol}://${host}`;
+        
+        if(process.env.SERVER==="remote"){
+            hostname = `https://${host}`;
+        }
 
         console.log(`🏠 Hostname: ${hostname}`);
         console.log('========================================\n');
